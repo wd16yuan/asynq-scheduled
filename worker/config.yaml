@@ -1,0 +1,18 @@
+system:
+  concurrency: 10 # 并发数
+
+redis:
+  db: 6
+  addr: 127.0.0.1:6379
+  password: ""
+
+zap:
+  level: info
+  format: console
+  prefix: "[padmin/worker]"
+  director: log
+  encode-level: LowercaseColorLevelEncoder
+  stacktrace-key: stacktrace
+  log-in-console: true
+  max-age: 30 # 默认日志留存默认以天为单位
+  show-line: true

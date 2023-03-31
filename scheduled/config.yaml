@@ -1,0 +1,33 @@
+system:
+  db-type: mysql
+  interval: 10 # 指定同步频率，单位秒
+  retention: 60 # 任务保留60分钟
+  retry: 3 # 尝试次数
+
+redis:
+  db: 6
+  addr: 127.0.0.1:6379
+  password: ""
+
+mysql:
+  path: 127.0.0.1
+  port: "3306"
+  config: charset=utf8mb4&parseTime=True&loc=Local
+  db-name: padmin
+  username: root
+  password: 123456
+  max-idle-conns: 10
+  max-open-conns: 100
+  log-mode: ""
+  log-zap: false
+
+zap:
+  level: info
+  format: console
+  prefix: "[padmin/scheduled]"
+  director: log
+  encode-level: LowercaseColorLevelEncoder
+  stacktrace-key: stacktrace
+  log-in-console: true
+  max-age: 30 # 默认日志留存默认以天为单位
+  show-line: true
